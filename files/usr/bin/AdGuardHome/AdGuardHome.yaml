@@ -1,0 +1,153 @@
+bind_host: 0.0.0.0
+bind_port: 3000
+users:
+- name: root
+  password: $2a$10$uegUw06q54hk.L0qjqFpg.T9Cmtecz5HZb7VMLEbVpMD8DuSeUufq
+language: ""
+rlimit_nofile: 0
+web_session_ttl: 720
+dns:
+  bind_host: 0.0.0.0
+  port: 5353
+  statistics_interval: 1
+  querylog_enabled: true
+  querylog_interval: 1
+  querylog_memsize: 0
+  protection_enabled: true
+  blocking_mode: nxdomain
+  blocking_ipv4: ""
+  blocking_ipv6: ""
+  blocked_response_ttl: 10
+  ratelimit: 0
+  ratelimit_whitelist: []
+  refuse_any: true
+  bootstrap_dns:
+  - 1.1.1.1
+  - 8.8.8.8
+  all_servers: true
+  edns_client_subnet: false
+  aaaa_disabled: false
+  allowed_clients: []
+  disallowed_clients: []
+  blocked_hosts: []
+  parental_block_host: family-block.dns.adguard.com
+  safebrowsing_block_host: standard-block.dns.adguard.com
+  cache_size: 4194304
+  upstream_dns:
+  - 114.114.114.114
+  - 119.29.29.29
+  - 223.5.5.5
+  - tls://dns.rubyfish.cn:853
+  - tls://dns.google
+  - tls://1.1.1.1
+  - tls://dns.quad9.net
+  filtering_enabled: true
+  filters_update_interval: 12
+  parental_enabled: false
+  safesearch_enabled: true
+  safebrowsing_enabled: false
+  safebrowsing_cache_size: 1048576
+  safesearch_cache_size: 1048576
+  parental_cache_size: 1048576
+  cache_time: 30
+  rewrites: []
+  blocked_services: []
+tls:
+  enabled: false
+  server_name: ""
+  force_https: false
+  port_https: 443
+  port_dns_over_tls: 853
+  allow_unencrypted_doh: false
+  strict_sni_check: false
+  certificate_chain: ""
+  private_key: ""
+  certificate_path: ""
+  private_key_path: ""
+filters:
+- enabled: true
+  url: https://easylist.to/easylist/easylist.txt
+  name: EasyList
+  id: 1580718435
+- enabled: true
+  url: https://easylist-downloads.adblockplus.org/easylistchina.txt
+  name: EasyList China
+  id: 1580718436
+- enabled: true
+  url: https://easylist.to/easylist/easyprivacy.txt
+  name: EasyPrivacy
+  id: 1580718437
+- enabled: true
+  url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+  name: AdGuard Simplified Domain Names filter
+  id: 1580710437
+- enabled: true
+  url: https://filters.adtidy.org/extension/chromium/filters/11.txt
+  name: AdGuard Mobile Ads filter
+  id: 1580718438
+- enabled: true
+  url: https://filters.adtidy.org/extension/chromium/filters/2.txt
+  name: AdGuard Base filter
+  id: 1580718439
+- enabled: true
+  url: https://filters.adtidy.org/extension/chromium/filters/14.txt
+  name: AdGuard Annoyances filter
+  id: 1580718440
+- enabled: true
+  url: https://filters.adtidy.org/extension/chromium/filters/4.txt
+  name: AdGuard Social Media filter
+  id: 1580718441
+- enabled: true
+  url: https://filters.adtidy.org/extension/chromium/filters/3.txt
+  name: AdGuard Tracking Protection filter
+  id: 1580718443
+- enabled: true
+  url: https://filters.adtidy.org/extension/chromium/filters/7.txt
+  name: AdGuard Japanese filter
+  id: 1582648994
+- enabled: true
+  url: https://gitee.com/xinggsf/Adblock-Rule/raw/master/rule.txt
+  name: 乘风 广告过滤规则
+  id: 1583164715
+- enabled: true
+  url: https://gitee.com/xinggsf/Adblock-Rule/raw/master/mv.txt
+  name: 乘风 视频广告过滤规则
+  id: 1583164716
+- enabled: true
+  url: https://fanboy.co.nz/r/fanboy-ultimate.txt
+  name: Fanboy+Easylist-Merged Ultimate List
+  id: 1583164717
+- enabled: true
+  url: https://gitee.com/halflife/list/raw/master/ad.txt
+  name: My AdFilters
+  id: 1583164719
+- enabled: true
+  url: https://gitee.com/halflife/list/raw/master/ad2.txt
+  name: CJX's AdFilters
+  id: 1583164720
+- enabled: true
+  url: https://gitee.com/privacy-protection-tools/anti-ad/raw/master/easylist.txt
+  name: anti-AD
+  id: 1584160405
+- enabled: true
+  url: https://raw.githubusercontent.com/vokins/yhosts/master/hosts.txt
+  name: yhosts
+  id: 1584160406
+whitelist_filters: []
+user_rules:
+- '||iflysec.com^'
+- '||play.aiseet.atianqi.com^'
+- '#@@||ckjr001.com^'
+dhcp:
+  enabled: false
+  interface_name: ""
+  gateway_ip: ""
+  subnet_mask: ""
+  range_start: ""
+  range_end: ""
+  lease_duration: 86400
+  icmp_timeout_msec: 1000
+clients: []
+log_file: ""
+verbose: false
+schema_version: 6
