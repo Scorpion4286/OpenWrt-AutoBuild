@@ -19,8 +19,7 @@ cp -f -r ./files ./package/base-files
 
 # Install AdGuard Home
 cd ./package
-git clone https://github.com/Scorpion4286/AdGuard_OpenWrt.git
-git clone https://github.com/happyzhang1995/luci-app-adguardhome.git
+git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
 
 # Install Luci For Clash
 git clone https://github.com/frainzy1477/luci-app-clash.git
