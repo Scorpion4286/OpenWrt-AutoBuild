@@ -7,9 +7,7 @@
 #=================================================
 
 # Modify default IP
-sed -i 's/192.168.1.1/172.16.100.1/g' package/base-files/files/bin/config_generate
-# Change Time Zone
-sed -i 's/timezone='UTC'/timezone='CST-8'/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/172.16.100.15/g' package/base-files/files/bin/config_generate
 # Change NTP Server
 sed -i 's/0.openwrt.pool.ntp.org/cn.ntp.org.cn/g' package/base-files/files/bin/config_generate
 sed -i 's/1.openwrt.pool.ntp.org/ntp.aliyun.com/g' package/base-files/files/bin/config_generate
@@ -21,7 +19,10 @@ cp -f -r ./files ./package/base-files
 cd ./package
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
 
-# Install Luci For Clash
-git clone https://github.com/frainzy1477/luci-app-clash.git
+# Install Clash
+git clone https://github.com/vernesong/OpenClash.git
+cd ./OpenClash
+git checkout v0.38.4-beta
+cd ..
 
 cd .. && ./scripts/feeds install -a
