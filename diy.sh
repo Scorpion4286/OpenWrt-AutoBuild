@@ -22,7 +22,7 @@ git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
 # Install Clash
 git clone https://github.com/vernesong/OpenClash.git
 cd ./OpenClash
-git checkout v0.38.4-beta
+git checkout v0.40.14-beta
 cd ..
 
 cd .. && ./scripts/feeds install -a
