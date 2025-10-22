@@ -10,13 +10,13 @@
 cd ./package
 git clone https://github.com/kongfl888/luci-app-adguardhome.git
 cd ./luci-app-adguardhome
-git checkout v1.8-20200824
+git checkout v1.8-20221120
 cd ..
 
 # Install Clash
 git clone https://github.com/vernesong/OpenClash.git
 cd ./OpenClash
-git checkout v0.41.14-beta
+git checkout v0.47.015
 cd ..
 
 # Uncomment a feed source
