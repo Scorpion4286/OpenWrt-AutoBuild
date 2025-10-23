@@ -54,12 +54,12 @@ jobs:
         ./scripts/feeds install -a
         ./scripts/feeds install -a
 
-    - name: Import external feeds - passwall
+    - name: Import external feeds - adguardhome
       working-directory: ./openwrt
       run: |
         git clone -b v1.8-20221120 https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
 
-    - name: Import external feeds - JerryKuKu Argon
+    - name: Import external feeds - OpenClash
       working-directory: ./openwrt
       run: |
         git clone -b v0.47.015 https://github.com/vernesong/OpenClash.git package/OpenClash
@@ -69,7 +69,7 @@ jobs:
         CONFIG_FILE: '.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x ./diy-part2.sh && ./diy-part2.sh
+        chmod +x ./diy.sh && ./diy.sh
         cd openwrt && make defconfig
         
     - name: Download package
